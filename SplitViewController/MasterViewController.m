@@ -36,6 +36,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
     
+        
     _patientList = [[NSMutableArray alloc]init];
     
     // Initialize the refresh control.
@@ -209,16 +210,14 @@
     //[self.tableView setSeparatorStyle:UITableViewCellSeparatorStyleNone];
     self.tableView.tableFooterView = [[UIView alloc] initWithFrame:CGRectZero];
     [self performSegueWithIdentifier:@"showDetail" sender:self];
-
 }
-
 
 
 -(void)DBInsert:(NSArray *)arrValue{
     NSLog(@"arr ::%@",arrValue);
     [self createDatabaseIfNeeded];
     
-    if([_db open]){
+     if([_db open]){
         [_db executeUpdate:@"create table if not exists Events(eventName text, eventURL text)"];
         [_db close];
     }
@@ -234,10 +233,6 @@
             NSLog(@"insert Status : %d",insertStatus);
         }
     }
-    
-    
-    
-    
 }
 
 

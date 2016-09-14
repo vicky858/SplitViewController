@@ -78,6 +78,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     // Do any additional setup after loading the view, typically from a nib.
     _usrImg.backgroundColor = [UIColor colorWithRed:(20.0f/255.0f) green:(173.0f/255.0f) blue:(199.0f/255.0f) alpha:1.0];
     _usrImg.layer.masksToBounds = YES;
@@ -92,7 +93,8 @@
     [self configureView];
     [self setUpLineChartView];
     [self populateChartData];
-//    [self setUpPieChartView];
+   
+    //    [self setUpPieChartView];
 //    [self populatePieChartData];
 }
 /*
@@ -267,11 +269,11 @@
     [colors addObject:[UIColor colorWithRed:54/255.f green:68/255.f blue:212/255.f alpha:1.f]];
     
     NSMutableArray *circleColor =[[NSMutableArray alloc]init];
-    //[circleColor addObjectsFromArray:ChartColorTemplates.vordiplom];
-    //[circleColor addObjectsFromArray:ChartColorTemplates.joyful];
-    //[circleColor addObjectsFromArray:ChartColorTemplates.colorful];
-    //[circleColor addObjectsFromArray:ChartColorTemplates.liberty];
-    //[circleColor addObjectsFromArray:ChartColorTemplates.pastel];
+//    [circleColor addObjectsFromArray:ChartColorTemplates.vordiplom];
+//    [circleColor addObjectsFromArray:ChartColorTemplates.joyful];
+//    [circleColor addObjectsFromArray:ChartColorTemplates.colorful];
+//    [circleColor addObjectsFromArray:ChartColorTemplates.liberty];
+//    [circleColor addObjectsFromArray:ChartColorTemplates.pastel];
     [circleColor addObject:[UIColor colorWithRed:101/255.f green:64/255.f blue:166/255.f alpha:1.f]];
     
     LineChartDataSet *set1 = nil;
