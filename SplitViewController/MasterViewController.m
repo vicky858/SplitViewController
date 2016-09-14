@@ -10,12 +10,19 @@
 #import "DetailViewController.h"
 #import "PatientDetails.h"
 #import "MyTableViewCell.h"
+#import "SQLiteManager.h"
+#import "FMDatabase.h"
 
 
 @interface MasterViewController ()
 {
     PatientDetails *patientObj;
+    NSMutableArray *bookArray;
+    SQLiteManager *sqldb;
+    NSDictionary *xmlDictionary;
+    NSString *_databasePath;
     
+
     
 }
 @property NSMutableArray *objects;
@@ -205,6 +212,59 @@
 
 }
 
+
+
+-(void)DBInsert:(NSArray *)arrValue{
+    NSLog(@"arr ::%@",arrValue);
+    [self createDatabaseIfNeeded];
+    
+    if([_db open]){
+        [_db executeUpdate:@"create table if not exists Events(eventName text, eventURL text)"];
+        [_db close];
+    }
+    
+    BOOL updaetStatus = NO;
+    BOOL insertStatus = NO;
+    for (NSDictionary *dic in arrValue) {
+        if([self findEvent:dic]){
+            updaetStatus = [self updateEvent:dic];
+            NSLog(@"updaet Status : %d",updaetStatus);
+        }else{
+            insertStatus = [self insertEvent:dic];
+            NSLog(@"insert Status : %d",insertStatus);
+        }
+    }
+    
+    
+    
+    
+}
+
+
+-(BOOL)findEvent:(NSDictionary*)obj{
+    
+    [_db open];
+    FMResultSet *results = [_db executeQuery:@"SELECT * FROM Events where eventName= ?;",[obj objectForKey:@"@event"]];
+    
+    if([results next]) {
+        [_db close];
+        return YES;
+    }
+    [_db close];
+    return NO;
+}
+
+-(BOOL)updateEvent:(NSDictionary*)obj{
+    
+    [_db open];
+    return [_db executeUpdate:@"UPDATE Events set eventName= ?, eventURL=? where eventName= ?;", [obj objectForKey:@"@event"], [obj objectForKey:@"text"], [obj objectForKey:@"@event"]];
+}
+
+-(BOOL)insertEvent:(NSDictionary*)obj{
+    [_db open];
+    return [_db executeUpdate:@"INSERT INTO Events (eventName, eventURL) VALUES (?,?);", [obj objectForKey:@"@event"], [obj objectForKey:@"text"]];
+}
+
 - (void)viewWillAppear:(BOOL)animated {
     self.clearsSelectionOnViewWillAppear = self.splitViewController.isCollapsed;
     [super viewWillAppear:animated];
@@ -281,7 +341,7 @@
 }
 
 #pragma mark - Table View
-
+/*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     // Return the number of sections.
@@ -309,12 +369,17 @@
     
     return 0;
 }
+ */
+
+
 /*
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView
 {
     return 1;
 }
 */
+
+
 - (NSInteger)tableView:(UITableView *)tableView
  numberOfRowsInSection:(NSInteger)section
 {
@@ -376,6 +441,57 @@
     
     
 }
+-(void)createDatabaseIfNeeded{
+    
+    BOOL success;
+    NSError *error;
+    
+    //FileManager - Object allows easy access to the File System.
+    NSFileManager *FileManager = [NSFileManager defaultManager];
+    
+    //Get the complete users document directory path.
+    NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+    
+    //Get the first path in the array.
+    NSString *documentsDirectory = [paths objectAtIndex:0];
+    
+    //Create the complete path to the database file.
+    NSString *databasePath = [documentsDirectory stringByAppendingPathComponent:@"PatientDetails.sqlite"];
+    
+    //Check if the file exists or not.
+    success = [FileManager fileExistsAtPath:databasePath];
+    
+    //If the database is present then quit.
+    if(success)
+    {
+        [self OpenDB:databasePath];
+        return;
+    }
+    
+    //the database does not exists, so we will copy it to the users document directory]
+    NSString *dbPath = [[[NSBundle mainBundle] resourcePath] stringByAppendingPathComponent:@"PatientDetails.sqlite"];
+    
+    //Copy the database file to the users document directory.
+    success = [FileManager copyItemAtPath:dbPath toPath:databasePath error:&error];
+    
+    //If the above operation is not a success then display a message.
+    //Error message can be seen in the debugger's console window.
+    if(!success)
+        NSAssert1(0, @"Failed to copy the database. Error: %@.", [error localizedDescription]);
+    [self OpenDB:databasePath];
+}
 
+-(void)OpenDB:(NSString*)strDBPath
+{
+    if(!_db)
+    {
+        _db = [[FMDatabase alloc] initWithPath:strDBPath];
+        if (![_db open]) {
+            //(@"Could not open db.");
+            return;
+        }
+        NSLog(@"FM DB instance ready at path = %@",strDBPath);
+    }
+}
 
 @end

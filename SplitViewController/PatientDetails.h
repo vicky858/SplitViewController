@@ -2,7 +2,7 @@
 //  PatientDetails.h
 //  SplitViewController
 //
-//  Created by Ram Venugopal on 10/09/16.
+//  Created by vignesh on 9/12/16.
 //  Copyright © 2016 vignesh. All rights reserved.
 //
 

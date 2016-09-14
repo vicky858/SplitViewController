@@ -12,12 +12,14 @@
 		212888AD1D885FA1006D2815 /* DateValueFormatter.m in Sources */ = {isa = PBXBuildFile; fileRef = 212888AC1D885FA1006D2815 /* DateValueFormatter.m */; };
 		212888B31D886AA3006D2815 /* MyTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 212888B21D886AA2006D2815 /* MyTableViewCell.m */; };
 		21361DAB1D83DC2500074F01 /* PatientDetails.m in Sources */ = {isa = PBXBuildFile; fileRef = 21361DAA1D83DC2500074F01 /* PatientDetails.m */; };
-		2F1C6C3F1D895F1500BB1205 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C321D895F1500BB1205 /* FMDatabase.m */; };
-		2F1C6C401D895F1500BB1205 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C341D895F1500BB1205 /* FMDatabaseAdditions.m */; };
-		2F1C6C411D895F1500BB1205 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C361D895F1500BB1205 /* FMDatabasePool.m */; };
-		2F1C6C421D895F1500BB1205 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C381D895F1500BB1205 /* FMDatabaseQueue.m */; };
-		2F1C6C441D895F1500BB1205 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C3B1D895F1500BB1205 /* FMResultSet.m */; };
-		2F1C6C451D895F1500BB1205 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C3D1D895F1500BB1205 /* SQLiteManager.m */; };
+		2F1C6C5F1D8965ED00BB1205 /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 2F1C6C5E1D8965ED00BB1205 /* libsqlite3.tbd */; };
+		2F1C6C831D89664C00BB1205 /* FMDatabase.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C761D89664C00BB1205 /* FMDatabase.m */; };
+		2F1C6C841D89664C00BB1205 /* FMDatabaseAdditions.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C781D89664C00BB1205 /* FMDatabaseAdditions.m */; };
+		2F1C6C851D89664C00BB1205 /* FMDatabasePool.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C7A1D89664C00BB1205 /* FMDatabasePool.m */; };
+		2F1C6C861D89664C00BB1205 /* FMDatabaseQueue.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C7C1D89664C00BB1205 /* FMDatabaseQueue.m */; };
+		2F1C6C881D89664C00BB1205 /* FMResultSet.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C7F1D89664C00BB1205 /* FMResultSet.m */; };
+		2F1C6C891D89664C00BB1205 /* SQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F1C6C811D89664C00BB1205 /* SQLiteManager.m */; };
+		2F1C6C8B1D896D4500BB1205 /* PatientDetails.sqlite in Resources */ = {isa = PBXBuildFile; fileRef = 2F1C6C8A1D896D4500BB1205 /* PatientDetails.sqlite */; };
 		2F40C0AA1D812FFF0010CBDD /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F40C0A91D812FFF0010CBDD /* main.m */; };
 		2F40C0AD1D812FFF0010CBDD /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 2F40C0AC1D812FFF0010CBDD /* AppDelegate.m */; };
 		2F40C0B81D812FFF0010CBDD /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2F40C0B71D812FFF0010CBDD /* Assets.xcassets */; };
@@ -105,19 +107,21 @@
 		212888B21D886AA2006D2815 /* MyTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MyTableViewCell.m; sourceTree = "<group>"; };
 		21361DA91D83DC2500074F01 /* PatientDetails.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PatientDetails.h; sourceTree = "<group>"; };
 		21361DAA1D83DC2500074F01 /* PatientDetails.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PatientDetails.m; sourceTree = "<group>"; };
-		2F1C6C311D895F1500BB1205 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
-		2F1C6C321D895F1500BB1205 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
-		2F1C6C331D895F1500BB1205 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
-		2F1C6C341D895F1500BB1205 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
-		2F1C6C351D895F1500BB1205 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
-		2F1C6C361D895F1500BB1205 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
-		2F1C6C371D895F1500BB1205 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
-		2F1C6C381D895F1500BB1205 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
-		2F1C6C391D895F1500BB1205 /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
-		2F1C6C3A1D895F1500BB1205 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
-		2F1C6C3B1D895F1500BB1205 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
-		2F1C6C3C1D895F1500BB1205 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
-		2F1C6C3D1D895F1500BB1205 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		2F1C6C5E1D8965ED00BB1205 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		2F1C6C751D89664C00BB1205 /* FMDatabase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabase.h; sourceTree = "<group>"; };
+		2F1C6C761D89664C00BB1205 /* FMDatabase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabase.m; sourceTree = "<group>"; };
+		2F1C6C771D89664C00BB1205 /* FMDatabaseAdditions.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseAdditions.h; sourceTree = "<group>"; };
+		2F1C6C781D89664C00BB1205 /* FMDatabaseAdditions.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseAdditions.m; sourceTree = "<group>"; };
+		2F1C6C791D89664C00BB1205 /* FMDatabasePool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabasePool.h; sourceTree = "<group>"; };
+		2F1C6C7A1D89664C00BB1205 /* FMDatabasePool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabasePool.m; sourceTree = "<group>"; };
+		2F1C6C7B1D89664C00BB1205 /* FMDatabaseQueue.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMDatabaseQueue.h; sourceTree = "<group>"; };
+		2F1C6C7C1D89664C00BB1205 /* FMDatabaseQueue.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMDatabaseQueue.m; sourceTree = "<group>"; };
+		2F1C6C7D1D89664C00BB1205 /* fmdb.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = fmdb.m; sourceTree = "<group>"; };
+		2F1C6C7E1D89664C00BB1205 /* FMResultSet.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = FMResultSet.h; sourceTree = "<group>"; };
+		2F1C6C7F1D89664C00BB1205 /* FMResultSet.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = FMResultSet.m; sourceTree = "<group>"; };
+		2F1C6C801D89664C00BB1205 /* SQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SQLiteManager.h; sourceTree = "<group>"; };
+		2F1C6C811D89664C00BB1205 /* SQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SQLiteManager.m; sourceTree = "<group>"; };
+		2F1C6C8A1D896D4500BB1205 /* PatientDetails.sqlite */ = {isa = PBXFileReference; lastKnownFileType = file; path = PatientDetails.sqlite; sourceTree = "<group>"; };
 		2F40C0A51D812FFF0010CBDD /* SplitViewController.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SplitViewController.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2F40C0A91D812FFF0010CBDD /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		2F40C0AB1D812FFF0010CBDD /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -149,6 +153,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2F1C6C5F1D8965ED00BB1205 /* libsqlite3.tbd in Frameworks */,
 				210F205A1D82955900D20810 /* Charts.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -174,22 +179,22 @@
 			name = Products;
 			sourceTree = "<group>";
 		};
-		2F1C6C3E1D895F1500BB1205 /* CoreLib */ = {
+		2F1C6C821D89664C00BB1205 /* CoreLib */ = {
 			isa = PBXGroup;
 			children = (
-				2F1C6C311D895F1500BB1205 /* FMDatabase.h */,
-				2F1C6C321D895F1500BB1205 /* FMDatabase.m */,
-				2F1C6C331D895F1500BB1205 /* FMDatabaseAdditions.h */,
-				2F1C6C341D895F1500BB1205 /* FMDatabaseAdditions.m */,
-				2F1C6C351D895F1500BB1205 /* FMDatabasePool.h */,
-				2F1C6C361D895F1500BB1205 /* FMDatabasePool.m */,
-				2F1C6C371D895F1500BB1205 /* FMDatabaseQueue.h */,
-				2F1C6C381D895F1500BB1205 /* FMDatabaseQueue.m */,
-				2F1C6C391D895F1500BB1205 /* fmdb.m */,
-				2F1C6C3A1D895F1500BB1205 /* FMResultSet.h */,
-				2F1C6C3B1D895F1500BB1205 /* FMResultSet.m */,
-				2F1C6C3C1D895F1500BB1205 /* SQLiteManager.h */,
-				2F1C6C3D1D895F1500BB1205 /* SQLiteManager.m */,
+				2F1C6C751D89664C00BB1205 /* FMDatabase.h */,
+				2F1C6C761D89664C00BB1205 /* FMDatabase.m */,
+				2F1C6C771D89664C00BB1205 /* FMDatabaseAdditions.h */,
+				2F1C6C781D89664C00BB1205 /* FMDatabaseAdditions.m */,
+				2F1C6C791D89664C00BB1205 /* FMDatabasePool.h */,
+				2F1C6C7A1D89664C00BB1205 /* FMDatabasePool.m */,
+				2F1C6C7B1D89664C00BB1205 /* FMDatabaseQueue.h */,
+				2F1C6C7C1D89664C00BB1205 /* FMDatabaseQueue.m */,
+				2F1C6C7D1D89664C00BB1205 /* fmdb.m */,
+				2F1C6C7E1D89664C00BB1205 /* FMResultSet.h */,
+				2F1C6C7F1D89664C00BB1205 /* FMResultSet.m */,
+				2F1C6C801D89664C00BB1205 /* SQLiteManager.h */,
+				2F1C6C811D89664C00BB1205 /* SQLiteManager.m */,
 			);
 			name = CoreLib;
 			path = "../../Downloads/SplitViewController-master/CoreLib";
@@ -198,7 +203,9 @@
 		2F40C09C1D812FFE0010CBDD = {
 			isa = PBXGroup;
 			children = (
-				2F1C6C3E1D895F1500BB1205 /* CoreLib */,
+				2F1C6C8A1D896D4500BB1205 /* PatientDetails.sqlite */,
+				2F1C6C5E1D8965ED00BB1205 /* libsqlite3.tbd */,
+				2F1C6C821D89664C00BB1205 /* CoreLib */,
 				210F204B1D82955100D20810 /* Charts.xcodeproj */,
 				2F40C0A71D812FFF0010CBDD /* SplitViewController */,
 				2F40C0C41D812FFF0010CBDD /* SplitViewControllerTests */,
@@ -218,8 +225,6 @@
 		2F40C0A71D812FFF0010CBDD /* SplitViewController */ = {
 			isa = PBXGroup;
 			children = (
-				212888AB1D885FA1006D2815 /* DateValueFormatter.h */,
-				212888AC1D885FA1006D2815 /* DateValueFormatter.m */,
 				2F40C0AB1D812FFF0010CBDD /* AppDelegate.h */,
 				2F40C0AC1D812FFF0010CBDD /* AppDelegate.m */,
 				2F7A1A9C1D894CFC00CCFDF6 /* MasterViewController.h */,
@@ -230,6 +235,8 @@
 				21361DAA1D83DC2500074F01 /* PatientDetails.m */,
 				212888B11D886AA2006D2815 /* MyTableViewCell.h */,
 				212888B21D886AA2006D2815 /* MyTableViewCell.m */,
+				212888AB1D885FA1006D2815 /* DateValueFormatter.h */,
+				212888AC1D885FA1006D2815 /* DateValueFormatter.m */,
 				2F7A1AA01D894CFC00CCFDF6 /* Main.storyboard */,
 				2F40C0B71D812FFF0010CBDD /* Assets.xcassets */,
 				2F7A1AA41D894DE700CCFDF6 /* Female1.jpeg */,
@@ -396,6 +403,7 @@
 				2F40C0D81D8142D00010CBDD /* about.html in Resources */,
 				2F7A1AAB1D894DE700CCFDF6 /* Female2.jpg in Resources */,
 				2F7A1AAC1D894DE700CCFDF6 /* Male1.jpg in Resources */,
+				2F1C6C8B1D896D4500BB1205 /* PatientDetails.sqlite in Resources */,
 				2F40C0D71D8142D00010CBDD /* about.jpg in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -419,14 +427,14 @@
 				212888AD1D885FA1006D2815 /* DateValueFormatter.m in Sources */,
 				212888B31D886AA3006D2815 /* MyTableViewCell.m in Sources */,
 				2F7A1AA11D894CFC00CCFDF6 /* MasterViewController.m in Sources */,
-				2F1C6C451D895F1500BB1205 /* SQLiteManager.m in Sources */,
-				2F1C6C401D895F1500BB1205 /* FMDatabaseAdditions.m in Sources */,
-				2F1C6C441D895F1500BB1205 /* FMResultSet.m in Sources */,
+				2F1C6C891D89664C00BB1205 /* SQLiteManager.m in Sources */,
+				2F1C6C841D89664C00BB1205 /* FMDatabaseAdditions.m in Sources */,
+				2F1C6C881D89664C00BB1205 /* FMResultSet.m in Sources */,
 				2F40C0AA1D812FFF0010CBDD /* main.m in Sources */,
-				2F1C6C411D895F1500BB1205 /* FMDatabasePool.m in Sources */,
-				2F1C6C421D895F1500BB1205 /* FMDatabaseQueue.m in Sources */,
+				2F1C6C851D89664C00BB1205 /* FMDatabasePool.m in Sources */,
+				2F1C6C861D89664C00BB1205 /* FMDatabaseQueue.m in Sources */,
 				2F7A1AA21D894CFC00CCFDF6 /* DetailViewController.m in Sources */,
-				2F1C6C3F1D895F1500BB1205 /* FMDatabase.m in Sources */,
+				2F1C6C831D89664C00BB1205 /* FMDatabase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -555,6 +563,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SplitViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;
@@ -569,6 +579,8 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				EMBEDDED_CONTENT_CONTAINS_SWIFT = YES;
 				INFOPLIST_FILE = SplitViewController/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.1;

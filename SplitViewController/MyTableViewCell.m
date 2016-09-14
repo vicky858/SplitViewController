@@ -2,9 +2,10 @@
 //  MyTableViewCell.m
 //  SplitViewController
 //
-//  Created by Ram Venugopal on 13/09/16.
+//  Created by vignesh on 9/14/16.
 //  Copyright © 2016 vignesh. All rights reserved.
 //
+
 
 #import "MyTableViewCell.h"
 
